@@ -19,12 +19,12 @@ function startRecording() {
             if (usuario) {
                 usuarioNombre = usuario.nombre;
                 const mensajeInicio = new SpeechSynthesisUtterance("Bienvenida " + usuario.nombre);
-                console.log("Bienvenida" + usuario.nombre);
+                console.log("Bienvenida a la aplicacion de monitoreo" + usuario.nombre);
                 window.speechSynthesis.speak(mensajeInicio);
                 stopRecording();
                 ejecutarComando(usuario.nombre);
             } else {
-                const mensajeInicio = new SpeechSynthesisUtterance("Usuario no reconocido");
+                const mensajeInicio = new SpeechSynthesisUtterance("Usuario no identificado");
                 window.speechSynthesis.speak(mensajeInicio);
                 stopRecording();
             }
